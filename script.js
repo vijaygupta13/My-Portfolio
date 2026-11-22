@@ -1,18 +1,17 @@
-
 console.log("My portfolio website is running!");
 
+const menuBtn = document.getElementById("menu-btn");
+const navMenu = document.getElementById("nav-menu");
 
-function changeContent() {
-    const content = document.getElementById("web-name");
-
-    if (window.innerWidth <= 768) {
-        content.innerHTML = "&lt;/&gt;";
-    } else {
-        content.innerHTML = "&lt;/&gt; My Portfulio";
-    }
-}
-changeContent();
-window.addEventListener("resize", changeContent);
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
 
 
-0
+const navLinks = navMenu.querySelectorAll("a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    });
+});

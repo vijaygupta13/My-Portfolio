@@ -1,17 +1,5 @@
 /* colours */
-
-/* :root {
-  --background: #0F172A;
-  --surface: #1E293B;
-  --secondary: #1E3A8A;
-  --primary: #D4AF37;
-  --text: #F8FAFC;
-  --muted: #CBD5E1;
-  --border: #334155;
-  --hover: #FACC15;
-  --light-text: #7e838d;
-} */
-
+/* version 2 */
 :root {
   --background: #18181b;
   --surface: #27272a;
@@ -80,6 +68,10 @@ li a:hover {
 a {
   text-decoration: none;
   color: var(--text);
+}
+
+#menu-btn {
+  display: none;
 }
 
 /* Home page */
@@ -451,30 +443,43 @@ footer p:first-child {
 }
 
 /* Responsiveness */
-/* Tablet */
-
-@media (max-width: 768px) {
-}
 
 /* Mobile */
 
 @media (max-width: 480px) {
-  li {
-    font-size: 12px;
-    padding: 0;
-  }
-  li:hover {
-    translate: 0px -2px 0px;
-    font-size: 13px;
+  /* Header nav */
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   #web-name {
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 5px;
   }
-  .header-ul {
-    width: 100%;
-  }
 
+  #menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text);
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+  .header-ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: var(--surface);
+    }
+
+    .header-ul.active {
+        display: flex;
+    }
   /* Home page */
   h1 {
     font-size: 35px;
@@ -593,40 +598,40 @@ footer p:first-child {
 
   /* Contact */
   #Contact {
-        width: 90%;
-        padding: 40px 0;
-        gap: 12px;
-    }
+    width: 90%;
+    padding: 40px 0;
+    gap: 12px;
+  }
 
-    #Contact h2 {
-        font-size: 25px;
-    }
+  #Contact h2 {
+    font-size: 25px;
+  }
 
-    #Contact p {
-        font-size: 13px;
-        text-align: center;
-        overflow-wrap: anywhere;
-    }
+  #Contact p {
+    font-size: 13px;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
 
-    #Contact a {
-        font-size: 14px;
-        padding: 9px 22px;
-    }
+  #Contact a {
+    font-size: 14px;
+    padding: 9px 22px;
+  }
 
-    /* Footre */
-    footer {
-        flex-direction: column;
-        justify-content: center;
-        gap: 12px;
-        padding: 25px 10px;
-        text-align: center;
-    }
+  /* Footer */
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 25px 10px;
+    text-align: center;
+  }
 
-    footer p {
-        font-size: 12px;
-    }
+  footer p {
+    font-size: 12px;
+  }
 
-    footer p:first-child {
-        font-size: 17px;
-    }
+  footer p:first-child {
+    font-size: 17px;
+  }
 }
