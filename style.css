@@ -1,5 +1,5 @@
 /* colours */
-/* version 2 */
+
 :root {
   --background: #18181b;
   --surface: #27272a;
@@ -47,6 +47,16 @@ header {
 
 #web-name {
   color: var(--text);
+  display: flex;
+  flex-direction: row;
+}
+
+#web-name p {
+  color: var(--primary);
+}
+
+#web-name:nth-child(2) {
+  margin-right: 10px;
 }
 
 .header-ul {
@@ -164,7 +174,6 @@ h1 {
 }
 
 #profile-pic:hover {
-  /* transform: translateY(5px); */
   width: 205px;
   height: 205px;
 }
@@ -214,6 +223,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid var(--border);
 }
 
 .skill-boxes {
@@ -269,6 +280,7 @@ h1 {
 }
 
 /* Project Page */
+
 #Projects {
   width: 90%;
   margin: auto;
@@ -293,20 +305,19 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid var(--border);
 }
 
 .project-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 15px;
-
   padding: 20px;
   min-width: 0;
-
   transition: 0.3s ease;
 }
 .project-cards:hover {
@@ -368,7 +379,9 @@ h1 {
 #Contact {
   width: 90%;
   margin: auto;
-  padding: 80px 0;
+  /* padding: 80px 0; */
+  padding-bottom: 40px;
+  padding-top: 0px;
   display: flex;
   flex-direction: column;
   gap: 15px;
